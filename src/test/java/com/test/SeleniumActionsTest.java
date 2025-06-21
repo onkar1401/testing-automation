@@ -25,7 +25,8 @@ public class SeleniumActionsTest extends BaseTest {
             System.err.println("Page title is = "+Title);
             ScreenshotTest.take_screenshot();
         }catch(Exception e){
-            System.out.println(e);
+            System.out.println("Exception message = "+e);
+
         }
       
     }
