@@ -103,12 +103,12 @@
                     <div class="method-list-content passed suite-Surefire_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.test.AppTest" class="method navigator-link" hash-for-method="test_login">test_login</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="SeleniumActionsTest" class="method navigator-link" hash-for-method="getTitle">getTitle</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.test.AppTest" class="method navigator-link" hash-for-method="test_login_2">test_login_2</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="SeleniumActionsTest" class="method navigator-link" hash-for-method="openPage">openPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Surefire_suite -->
@@ -126,21 +126,21 @@
           <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.test.AppTest</span>
+              <span class="class-name">SeleniumActionsTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="test_login">
-                  </a> <!-- test_login -->
-                  <span class="method-name">test_login</span>
+                  <a name="getTitle">
+                  </a> <!-- getTitle -->
+                  <span class="method-name">getTitle</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="test_login_2">
-                  </a> <!-- test_login_2 -->
-                  <span class="method-name">test_login_2</span>
+                  <a name="openPage">
+                  </a> <!-- openPage -->
+                  <span class="method-name">openPage</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -156,7 +156,10 @@
 &lt;suite name=&quot;Surefire suite&quot; verbose=&quot;0&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Surefire test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.test.AppTest&quot;/&gt;
+      &lt;class name=&quot;ScreenshotTest&quot;/&gt;
+      &lt;class name=&quot;readFilesTest&quot;/&gt;
+      &lt;class name=&quot;SeleniumActionsTest&quot;/&gt;
+      &lt;class name=&quot;BaseTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Surefire test --&gt;
 &lt;/suite&gt; &lt;!-- Surefire suite --&gt;
@@ -170,7 +173,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Surefire test (1 class)</span>
+                <span class="test-name">Surefire test (4 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -198,18 +201,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'test_login')
-data.setCell(0, 2, 'com.test.AppTest')
-data.setCell(0, 3, 2);
+data.setCell(0, 1, 'openPage')
+data.setCell(0, 2, 'SeleniumActionsTest')
+data.setCell(0, 3, 1084);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'test_login_2')
-data.setCell(1, 2, 'com.test.AppTest')
-data.setCell(1, 3, 0);
+data.setCell(1, 1, 'getTitle')
+data.setCell(1, 2, 'SeleniumActionsTest')
+data.setCell(1, 3, 342);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 ms</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -224,9 +227,18 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">BaseTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+                <span class="ignored-method-name">setup</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Surefire_suite" class="panel">
@@ -235,15 +247,23 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.test.AppTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">test_login</span>
+              <div class="chronological-class-name">SeleniumActionsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="test-method">
+                <span class="method-name">openPage</span>
+                <span class="method-start">1202 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">test_login_2</span>
-                <span class="method-start">3 ms</span>
+                <span class="method-name">getTitle</span>
+                <span class="method-start">2289 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-suite after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">2766 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

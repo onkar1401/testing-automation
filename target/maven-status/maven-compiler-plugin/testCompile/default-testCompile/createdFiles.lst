@@ -1,1 +1,4 @@
-com/test/AppTest.class
+readFilesTest.class
+SeleniumActionsTest.class
+ScreenshotTest.class
+BaseTest.class
