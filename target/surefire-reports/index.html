@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
-              <span class="suite-name border-passed">Surefire suite</span>
+              <span class="suite-name border-failed">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Surefire_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="readFilesTest" class="method navigator-link" hash-for-method="read_excel">read_excel</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Surefire_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -111,6 +125,16 @@
                         <a href="#" panel-name="suite-Surefire_suite" title="SeleniumActionsTest" class="method navigator-link" hash-for-method="openPage">openPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="SeleniumActionsTest" class="method navigator-link" hash-for-method="test_automcomplete">test_automcomplete</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="SeleniumActionsTest" class="method navigator-link" hash-for-method="test_registraction_form">test_registraction_form</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content passed suite-Surefire_suite -->
                   </li>
                 </ul>
@@ -123,6 +147,27 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">readFilesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="read_excel">
+                  </a> <!-- read_excel -->
+                  <span class="method-name">read_excel</span>
+                  <div class="stack-trace">org.testng.TestNGException: 
+Cannot inject @Test annotated Method [read_excel] with [class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
           <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -141,6 +186,20 @@
                   <a name="openPage">
                   </a> <!-- openPage -->
                   <span class="method-name">openPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test_automcomplete">
+                  </a> <!-- test_automcomplete -->
+                  <span class="method-name">test_automcomplete</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test_registraction_form">
+                  </a> <!-- test_registraction_form -->
+                  <span class="method-name">test_registraction_form</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -199,20 +258,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'openPage')
+data.setCell(0, 1, 'test_registraction_form')
 data.setCell(0, 2, 'SeleniumActionsTest')
-data.setCell(0, 3, 1084);
+data.setCell(0, 3, 3002);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'getTitle')
+data.setCell(1, 1, 'openPage')
 data.setCell(1, 2, 'SeleniumActionsTest')
-data.setCell(1, 3, 342);
+data.setCell(1, 3, 2994);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'test_automcomplete')
+data.setCell(2, 2, 'SeleniumActionsTest')
+data.setCell(2, 3, 1308);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'getTitle')
+data.setCell(3, 2, 'SeleniumActionsTest')
+data.setCell(3, 3, 170);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'read_excel')
+data.setCell(4, 2, 'readFilesTest')
+data.setCell(4, 3, 0);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -233,9 +304,9 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">BaseTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
                 <span class="ignored-method-name">setup</span>
+                <br/>
+                <span class="ignored-method-name">tearDown</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -253,16 +324,24 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
+                <span class="method-name">test_automcomplete</span>
+                <span class="method-start">1761 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <span class="method-name">openPage</span>
-                <span class="method-start">1202 ms</span>
+                <span class="method-start">3070 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getTitle</span>
-                <span class="method-start">2289 ms</span>
+                <span class="method-start">6065 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">test_registraction_form</span>
+                <span class="method-start">6236 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">2766 ms</span>
+                <span class="method-start">9260 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
